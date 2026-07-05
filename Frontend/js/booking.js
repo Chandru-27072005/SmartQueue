@@ -118,7 +118,7 @@ bookingForm.addEventListener("submit",async function(e){
 
     try{
 
-        const response=await fetch("http://localhost:3000/api/bookings",{
+        const response=await fetch("http://smartqueue-uiy3.onrender.com/api/bookings",{
 
             method:"POST",
 

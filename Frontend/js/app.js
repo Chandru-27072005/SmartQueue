@@ -23,7 +23,7 @@ async function loadLiveQueue(){
 
     try{
 
-        const response=await fetch("http://localhost:3000/api/bookings");
+        const response=await fetch("http://smartqueue-uiy3.onrender.com/api/bookings");
         const result=await response.json();
 
         if(!result.success) return;
