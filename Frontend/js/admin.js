@@ -14,7 +14,7 @@ const nextTokenBtn=document.getElementById("nextTokenBtn");
 const logoutBtn=document.getElementById("logoutBtn");
 const resetDataBtn=document.getElementById("resetDataBtn");
 
-const API_URL="http://smartqueue-uiy3.onrender.com/api/bookings";
+const API_URL="https://smartqueue-uiy3.onrender.com/api/bookings";
 
 async function getBookings(){
 
@@ -374,7 +374,7 @@ if(exportBtn){
     exportBtn.addEventListener("click",()=>{
 
         window.open(
-            "http://smartqueue-uiy3.onrender.com/api/bookings/export",
+            "https://smartqueue-uiy3.onrender.com/api/bookings/export",
             "_blank"
         );
 

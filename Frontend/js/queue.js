@@ -9,7 +9,7 @@ const averageWait=document.getElementById("averageWait");
 const currentToken=document.getElementById("currentToken");
 const crowdLevel=document.getElementById("crowdLevel");
 
-const API_URL="http://smartqueue-uiy3.onrender.com/api/bookings";
+const API_URL="https://smartqueue-uiy3.onrender.com/api/bookings";
 
 async function getBookings(){
 
