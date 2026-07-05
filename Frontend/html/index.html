@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Queue | Online Token & Queue Management</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://kit.fontawesome.com/4f0b3a7f9d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-clock"></i></span>
+        <span>Smart Queue</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#stats">Stats</a></li>
+        <li><a href="book.html" class="nav-btn">Book Token</a></li>
+      </ul>
+
+      <button id="themeToggle" class="theme-toggle" title="Toggle Theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="tagline">Smart Waiting. Better Service.</p>
+        <h1>Online Token & Queue Management Made Easy</h1>
+        <p class="hero-text">
+          Smart Queue helps clinics, salons, service centers and help desks manage customers
+          efficiently with online token booking, live queue tracking and reduced waiting time.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="book.html" class="btn primary-btn">Book Token</a>
+          <a href="queue.html" class="btn secondary-btn">View Queue</a>
+        </div>
+
+        <div class="hero-badges">
+          <span><i class="fa-solid fa-circle-check"></i> Online Token Booking</span>
+          <span><i class="fa-solid fa-circle-check"></i> Live Queue Tracking</span>
+          <span><i class="fa-solid fa-circle-check"></i> Admin Dashboard</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="queue-card">
+          <div class="card-top">
+            <span class="live-badge">Live Queue</span>
+            <span class="crowd low">Low Crowd</span>
+          </div>
+
+          <h3>Current Token</h3>
+          <div class="token-number" id="currentToken">--</div>
+
+          <div class="queue-details">
+            <div>
+              <p>People Waiting</p>
+              <h4 id="waitingCount">0</h4>
+            </div>
+            <div>
+              <p>Avg Wait Time</p>
+              <h4 id="avgWait">0 mins</h4>
+            </div>
+          </div>
+
+          <div class="progress-section">
+            <p>Queue Progress</p>
+            <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="features section" id="features">
+      <div class="section-title">
+        <p class="mini-title">FEATURES</p>
+        <h2>Why Smart Queue?</h2>
+        <p>
+          A simple and efficient solution for customers and service providers to reduce waiting confusion.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-ticket"></i></div>
+          <h3>Online Token Booking</h3>
+          <p>Users can book tokens online without standing in a physical queue.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+          <h3>Estimated Waiting Time</h3>
+          <p>Customers can know approximate waiting time before their turn.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+          <h3>Live Queue Tracking</h3>
+          <p>See current token number, people ahead and queue progress in real time.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Admin Dashboard</h3>
+          <p>Admins can call next token, mark completed and manage daily bookings easily.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-signal"></i></div>
+          <h3>Crowd Level Indicator</h3>
+          <p>Shows crowd level as Low, Medium or High for better time planning.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-shield-heart"></i></div>
+          <h3>Better Customer Experience</h3>
+          <p>Reduces waiting stress and improves service center organization.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works section" id="how">
+      <div class="section-title">
+        <p class="mini-title">PROCESS</p>
+        <h2>How It Works</h2>
+        <p>Book a token in a few simple steps and track your queue status easily.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Select Service</h3>
+          <p>Choose the required service such as clinic consultation, salon, or service center support.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Book Token</h3>
+          <p>Enter your details, select time slot and confirm your token booking online.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Track Queue</h3>
+          <p>View token status, current queue progress and estimated waiting time.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Get Service</h3>
+          <p>Visit when your turn is near and avoid unnecessary waiting at the location.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section" id="stats">
+      <div class="section-title">
+        <p class="mini-title">BENEFITS</p>
+        <h2>Queue Efficiency at a Glance</h2>
+        <p>Smart Queue helps service centers improve flow and reduce waiting confusion.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>50%</h3>
+          <p>Reduced waiting confusion</p>
+        </div>
+        <div class="stat-card">
+          <h3>24/7</h3>
+          <p>Online token booking access</p>
+        </div>
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Digital queue visibility</p>
+        </div>
+        <div class="stat-card">
+          <h3>Easy</h3>
+          <p>Admin queue management</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta section">
+      <div class="cta-box">
+        <h2>Ready to Book Your Token?</h2>
+        <p>Skip the confusion. Manage waiting smartly with Smart Queue.</p>
+        <div class="cta-buttons">
+          <a href="book.html" class="btn primary-btn">Book Now</a>
+          <a href="admin-login.html" class="btn secondary-btn">Admin Login</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>Smart Queue</h3>
+        <p>Web-based token and queue management system for clinics, salons and service centers.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="book.html">Book Token</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Smart Queue. Mini Project.</p>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

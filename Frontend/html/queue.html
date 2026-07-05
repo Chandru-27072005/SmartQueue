@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Queue | Smart Queue</title>
+
+  <link rel="stylesheet" href="../css/queue.css">
+
+  <script src="https://kit.fontawesome.com/4f0b3a7f9d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header class="page-header">
+
+    <div class="container nav-bar">
+
+      <a href="index.html" class="brand">
+
+        <span class="brand-icon">
+          <i class="fa-solid fa-clock"></i>
+        </span>
+
+        <span>Smart Queue</span>
+
+      </a>
+
+      <div class="nav-actions">
+
+        <a href="index.html" class="nav-link">Home</a>
+
+        <a href="book.html" class="nav-link">Book Token</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="queue-page">
+
+    <div class="container">
+
+      <section class="queue-hero">
+
+        <div>
+
+          <p class="section-tag">LIVE STATUS</p>
+
+          <h1>Live Queue Dashboard</h1>
+
+          <p class="hero-text">
+            Track the current queue, token status, waiting count and crowd level in one place.
+          </p>
+
+        </div>
+
+        <div class="current-token-card">
+
+          <p>Current Serving Token</p>
+
+          <h2 id="currentToken">--</h2>
+
+          <span id="crowdLevel" class="crowd-badge low">
+            Low Crowd
+          </span>
+
+        </div>
+
+      </section>
+
+      <div class="stats-grid">
+
+        <div class="stat-card">
+
+          <p>Total Bookings</p>
+
+          <h3 id="totalBookings">0</h3>
+
+        </div>
+
+        <div class="stat-card">
+
+          <p>Waiting</p>
+
+          <h3 id="waitingCount">0</h3>
+
+        </div>
+
+        <div class="stat-card">
+
+          <p>Serving</p>
+
+          <h3 id="servingCount">0</h3>
+
+        </div>
+
+        <div class="stat-card">
+
+          <p>Completed</p>
+
+          <h3 id="completedCount">0</h3>
+
+        </div>
+        <div class="stat-card">
+
+       <p>Estimated Wait</p>
+
+       <h3 id="averageWait">0 mins</h3>
+      </div>
+
+      </div>
+
+      <section class="queue-list-section">
+
+        <div class="section-header">
+
+          <div>
+
+            <h2>Booked Tokens</h2>
+
+            <p>All token bookings and their current status</p>
+
+          </div>
+
+        </div>
+
+        <div id="emptyState" class="empty-state hidden">
+
+          <i class="fa-solid fa-inbox"></i>
+
+          <h3>No bookings available</h3>
+
+          <p>No token bookings found. Please book a token first.</p>
+
+          <a href="book.html" class="book-btn">
+            Book Token
+          </a>
+
+        </div>
+
+        <div id="queueList" class="queue-list"></div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="../js/queue.js"></script>
+
+</body>
+</html>

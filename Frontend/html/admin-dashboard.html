@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Smart Queue</title>
+  <link rel="stylesheet" href="../css/admin.css">
+  <script src="https://kit.fontawesome.com/4f0b3a7f9d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="dashboard-header">
+    <div class="container dashboard-nav">
+      <a href="index.html" class="brand">
+        <span class="brand-icon"><i class="fa-solid fa-clock"></i></span>
+        <span>Smart Queue Admin</span>
+      </a>
+
+      <div class="dashboard-actions">
+        <a href="queue.html" class="nav-link">Queue</a>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-page">
+    <div class="container">
+      <section class="dashboard-top">
+        <div>
+          <p class="section-tag">ADMIN PANEL</p>
+          <h1>Queue Management Dashboard</h1>
+          <p class="dashboard-text">
+            Manage bookings, call next token, mark completed and monitor queue status in real time.
+          </p>
+        </div>
+
+        <div class="admin-quick-actions">
+          <button id="nextTokenBtn" class="action-btn primary-action">
+            <i class="fa-solid fa-forward"></i>
+            Call Next Token
+          </button>
+          <button id="exportBtn" class="action-btn">
+            <i class="fa-solid fa-file-excel"></i>
+            Export Excel
+          </button>
+
+
+          <button id="resetDataBtn" class="action-btn reset-action">
+            <i class="fa-solid fa-rotate-left"></i>
+            Reset Data
+         </button>
+        </div>
+      </section>
+
+      <section class="dashboard-stats">
+        <div class="stat-card">
+          <p>Total Bookings</p>
+          <h3 id="adminTotalBookings">0</h3>
+        </div>
+
+        <div class="stat-card">
+          <p>Waiting Tokens</p>
+          <h3 id="adminWaitingCount">0</h3>
+        </div>
+
+        <div class="stat-card">
+          <p>Serving Token</p>
+          <h3 id="adminServingToken">--</h3>
+        </div>
+
+        <div class="stat-card">
+          <p>Completed Tokens</p>
+          <h3 id="adminCompletedCount">0</h3>
+        </div>
+      </section>
+
+      <div class="search-filter-bar">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by Token, Name or Phone"
+    >
+
+    <select id="statusFilter">
+
+        <option value="All">All</option>
+
+        <option value="Waiting">Waiting</option>
+
+        <option value="Serving">Serving</option>
+
+        <option value="Completed">Completed</option>
+
+    </select>
+
+</div>
+
+      <section class="admin-bookings-section">
+        <div class="section-header">
+          <div>
+            <h2>Manage Bookings</h2>
+            <p>Update token status and control the queue flow</p>
+          </div>
+        </div>
+
+        <div id="adminEmptyState" class="empty-state hidden">
+          <i class="fa-solid fa-inbox"></i>
+          <h3>No bookings available</h3>
+          <p>No token bookings found. Please add bookings from the booking page.</p>
+          <a href="book.html" class="book-btn">Book Token</a>
+        </div>
+        <div class="chart-card">
+        <h2>Queue Analytics</h2>
+        <canvas id="queueChart"></canvas>
+      </div>
+
+        <div id="adminBookingList" class="admin-booking-list"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../js/admin.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

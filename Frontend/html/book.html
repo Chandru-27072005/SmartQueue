@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Token | Smart Queue</title>
+  <link rel="stylesheet" href="../css/booking.css">
+  <script src="https://kit.fontawesome.com/4f0b3a7f9d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="page-header">
+    <div class="container nav-bar">
+      <a href="index.html" class="brand">
+        <span class="brand-icon"><i class="fa-solid fa-clock"></i></span>
+        <span>Smart Queue</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="queue.html" class="nav-link">Queue</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="booking-page">
+    <div class="container booking-layout">
+      <section class="booking-info">
+        <p class="section-tag">SMART BOOKING</p>
+        <h1>Book Your Token Online</h1>
+        <p class="info-text">
+          Fill in your details, choose the service and time slot, and get your digital token instantly.
+          Smart Queue helps reduce waiting confusion and makes queue management easier.
+        </p>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <i class="fa-solid fa-ticket"></i>
+            <div>
+              <h3>Instant Token</h3>
+              <p>Get your token immediately after booking.</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h3>Save Time</h3>
+              <p>Avoid standing in long physical queues.</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <i class="fa-solid fa-users"></i>
+            <div>
+              <h3>Track Queue</h3>
+              <p>Know your token number and estimated waiting time.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking-form-section">
+        <div class="form-card">
+          <div class="form-header">
+            <h2>Token Booking Form</h2>
+            <p>Enter your details below</p>
+          </div>
+
+          <form id="bookingForm" class="booking-form">
+            <div class="form-group">
+              <label for="customerName">Full Name</label>
+              <input type="text" id="customerName" placeholder="Enter your full name">
+              <small class="error" id="nameError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number</label>
+              <input type="tel" id="phoneNumber" placeholder="Enter 10-digit mobile number">
+              <small class="error" id="phoneError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="serviceType">Service Type</label>
+              <select id="serviceType">
+                <option value="">Select a service</option>
+                <option value="Clinic Consultation">Clinic Consultation</option>
+                <option value="Salon Service">Salon Service</option>
+                <option value="Service Center Support">Service Center Support</option>
+                <option value="Document Verification">Document Verification</option>
+                <option value="Bank Help Desk">Bank Help Desk</option>
+              </select>
+              <small class="error" id="serviceError"></small>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bookingDate">Booking Date</label>
+                <input type="date" id="bookingDate">
+                <small class="error" id="dateError"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="timeSlot">Time Slot</label>
+                <select id="timeSlot">
+                  <option value="">Select slot</option>
+                  <option value="09:00 AM - 09:30 AM">09:00 AM - 09:30 AM</option>
+                  <option value="09:30 AM - 10:00 AM">09:30 AM - 10:00 AM</option>
+                  <option value="10:00 AM - 10:30 AM">10:00 AM - 10:30 AM</option>
+                  <option value="10:30 AM - 11:00 AM">10:30 AM - 11:00 AM</option>
+                  <option value="11:00 AM - 11:30 AM">11:00 AM - 11:30 AM</option>
+                  <option value="11:30 AM - 12:00 PM">11:30 AM - 12:00 PM</option>
+                  <option value="02:00 PM - 02:30 PM">02:00 PM - 02:30 PM</option>
+                  <option value="02:30 PM - 03:00 PM">02:30 PM - 03:00 PM</option>
+                  <option value="03:00 PM - 03:30 PM">03:00 PM - 03:30 PM</option>
+                  <option value="03:30 PM - 04:00 PM">03:30 PM - 04:00 PM</option>
+                </select>
+                <small class="error" id="slotError"></small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Notes (Optional)</label>
+              <textarea id="notes" rows="4" placeholder="Enter any additional details"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              Book Token
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <section class="token-output container">
+      <div id="successMessage" class="success-message hidden"></div>
+
+      <div id="tokenCard" class="token-card hidden">
+        <div class="token-top">
+          <div>
+            <p class="token-label">Generated Token</p>
+            <h2 id="displayTokenNumber">A101</h2>
+          </div>
+          <span class="token-status">Booked</span>
+        </div>
+
+        <div class="token-grid">
+          <div class="token-item">
+            <p>Name</p>
+            <h4 id="displayName">-</h4>
+          </div>
+          <div class="token-item">
+            <p>Phone</p>
+            <h4 id="displayPhone">-</h4>
+          </div>
+          <div class="token-item">
+            <p>Service</p>
+            <h4 id="displayService">-</h4>
+          </div>
+          <div class="token-item">
+            <p>Date</p>
+            <h4 id="displayDate">-</h4>
+          </div>
+          <div class="token-item">
+            <p>Slot</p>
+            <h4 id="displaySlot">-</h4>
+          </div>
+          <div class="token-item">
+            <p>Estimated Wait</p>
+            <h4 id="displayWait">-</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../js/booking.js"></script>
+</body>
+</html>
